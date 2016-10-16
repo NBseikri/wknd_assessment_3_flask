@@ -1,0 +1,42 @@
+<!doctype html>
+<html>
+<head>
+    <title>Job Application</title>
+    <link rel="stylesheet" href="./static/styles.css">
+</head>
+<body>
+<!-- your html goes here -->
+
+<!-- When possible, I used semantic elements (<main>, <form>, <label>, etc.) instead of just <div> which is less informative according to Aria recommendations. I also incorporated role= and label for= into my HTML. Per the w3.org resources, a number of elements below include implicit roles. Where a role= is omitted, the semantic element has it's own implied role. 
+
+As an explanatory note, the Aria resources online indicated that label for= correlates with an id= in an input element. While I don't ultimately refer to the id's "firstname", "lastname" or "salary" in my CSS, they are merely intended to satisfy the correlation between label for= and id=. -->
+
+<!-- Header ("large heading" from assessment instructions)-->
+    <h1 id="header" role="banner">Join our team!</h1>
+<!-- Main Content ("explanatory text" from assessment instructions)-->
+    <main id="content" role="main">At ABC Company, we are changing how people communicate in a fast paced world with our products. We want you to bring your talents to our innovative team. To be considered as a candidate, please fill out the form below.</main><br>  
+<!-- Form -->
+    <form action="/application" method="POST">
+        <!-- Input Text Fields -->
+        <div id="inputboxes">
+            <label for="firstname">First Name: </label>
+                <input id="firstname" type="input" name="firstname"><br>
+            <label for="lastname" id="lastnamelabel">Last Name: </label>
+                <input id="lastname" type="input" name="lastname"><br>
+            <label for="salary">Desired Annual Salary:* </label>
+                <input id="salary" type="input" name="salary"><br></div>
+        <!-- Dropdown Menu -->
+        <label for="desiredrole">Desired Role: </label>
+            <div id="dropdown">
+                <select id="desiredrole" name="desiredrole">
+                    <option value="Software Engineer">Software Engineer</option>
+                    <option value="QA Engineer">QA Engineer</option>
+                    <option value="Product Manager">Product Manager</option>
+                </select><br><br></div>
+        <!-- Form Footer -->
+        <div id="asterisk" role=contentinfo>*Desired annual salary must be expressed in US Dollars.</div><br>
+        <!-- Submit Button; End of Form -->
+        <input type="submit" id="submit"></form>
+<script src="http://code.jquery.com/jquery.js"></script>
+</body>
+</html>

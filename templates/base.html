@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{% block title %}TITLE GOES HERE{% endblock %}</title>
+    <link rel="stylesheet" href="/static/css/styles.css">
+    <script src="http://code.jquery.com/jquery.js"></script>
+</head>
+<body>
+    <h1>{% block header %}HEADER GOES HERE {% endblock %}</h1>
+    {% block content %}BLOCK CONTENT GOES HERE{% endblock %}
+</body>
+</html>

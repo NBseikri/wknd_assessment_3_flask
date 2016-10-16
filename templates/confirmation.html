@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+
+{% block title %}Application Submitted{% endblock %}
+
+{% block header %}<title>ABC Company</title>Application Submitted{% endblock %}
+
+{% block content %}
+    <div>Thank you, {{ first_name }} {{ last_name }}, for applying to be a {{ desired_role }} with ABC Company. Your minimum salary requirement is {{ salary }} dollars.</div>
+{% endblock %}
